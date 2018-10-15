@@ -1,5 +1,6 @@
-50243890bd5358ec14650ebebf06066c *DESCRIPTION
+1104e4048829648bc2d37960e0547d88 *DESCRIPTION
 c5e6e3fc72c4d308442cce0e1dd5f987 *NAMESPACE
+605725d54ab5f6062472b591056dcd6b *NEWS.md
 0aecae129bb7de519dbb60a34150e55c *R/RcppExports.R
 261ec6b7ec644e5cfbafba9130239dd4 *R/fitness.R
 1d4d504e7dd4e6e5401e98e032f1743b *R/functions.R
@@ -7,12 +8,12 @@ c5e6e3fc72c4d308442cce0e1dd5f987 *NAMESPACE
 d9dac8a43108036417643322f3b29fbb *R/plots.R
 20c14b68ba5c61f05f915cc8e17b3144 *R/ppgmmga.R
 c16793de93ba7758f171af695149055f *R/zzz.R
-0afc9eec0e957c66d70fd7f8c8368e40 *README.md
+e2e8054496bbe89959e44dfaf6b906de *README.md
 93c5d9c0429421117377bc83665a5ab8 *build/vignette.rds
-9058d7f67767ceaf655be948c369b1d2 *inst/CITATION
-4403162894f8f3dc43d8a8a375451926 *inst/doc/ppgmmga.R
-45e26bb06aa4b5ca44fac41215e858b1 *inst/doc/ppgmmga.Rmd
-8c9009c1910cd0c63df47ff9523818e5 *inst/doc/ppgmmga.html
+8b78e3bed69d9962aa111f7e1a2ae677 *inst/CITATION
+af274681004f5c7f011801cd672e4044 *inst/doc/ppgmmga.R
+a2204b45d2f9a58f5a6cc0f859f54fa7 *inst/doc/ppgmmga.Rmd
+16a7eade286a4d171a7bc4134163a8f5 *inst/doc/ppgmmga.html
 4f26cde8c8c0faeaab94a6d72a17710e *inst/scripts/jcgs/mc_negent_other_methods.R
 e379a4d7f0e48897e55edf71f20e2073 *inst/scripts/jcgs/misc.R
 32fac0d2d2126770a15b81dcbd351750 *man/plot.ppgmmga.Rd
@@ -24,8 +25,8 @@ ba8204746307104ec7319fb8b3762671 *man/ppgmmga.options.Rd
 9cd29fe4ed97e597ad05d799a7023ff1 *man/summary.ppgmmga.Rd
 8d46d69896a1f1d31ed76035a0e49d67 *src/Makevars
 5e039668886681df5f7310fef8e339d9 *src/RcppExports.cpp
-14392d7f8f3109b87d70daacd6904ed5 *src/approximations.cpp
+7b3767924a3f3b6ac68a5efaf55e7994 *src/approximations.cpp
 58ddec1282fadf1dedcf546cbf35b933 *src/functions.cpp
 18b1effa9c8a09e4b575577cb0de0d38 *src/init.c
-45e26bb06aa4b5ca44fac41215e858b1 *vignettes/ppgmmga.Rmd
+a2204b45d2f9a58f5a6cc0f859f54fa7 *vignettes/ppgmmga.Rmd
 0906cb78f2dae91a6181c01c8511edef *vignettes/vignette.css
