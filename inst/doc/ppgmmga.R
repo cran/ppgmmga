@@ -2,7 +2,7 @@
 library(knitr)
 opts_chunk$set(fig.align = "center", 
                out.width = "90%",
-               fig.width = 6, fig.height = 5.5,
+               fig.width = 6, fig.height = 5,
                dev.args=list(pointsize=10),
                par = TRUE, # needed for setting hook 
                collapse = TRUE, # collapse input & ouput code in chunks
@@ -17,7 +17,7 @@ knit_hooks$set(par = function(before, options, envir)
 library(ppgmmga)
 cat(ppgmmga:::ppgmmgaStartupMessage(), sep="")
 
-## ------------------------------------------------------------------------
+## ---- fig.width = 6, fig.height = 6--------------------------------------
 library(mclust)
 data("banknote")
 X <- banknote[,-1]
@@ -29,15 +29,25 @@ clPairs(X, classification = Class)
 pp1D <- ppgmmga(data = X, d = 1, approx = "UT", seed = 1)
 pp1D
 summary(pp1D)
+
+## ---- out.width="60%", fig.width=6, fig.height=4-------------------------
 plot(pp1D)
+
+## ---- out.width="70%", fig.width=7, fig.height=4-------------------------
 plot(pp1D, class = Class)
 
 ## ------------------------------------------------------------------------
 pp2D <- ppgmmga(data = X, d = 2, approx = "UT", seed = 1)
 summary(pp2D, check = TRUE)
 summary(pp2D$GMM)
+
+## ------------------------------------------------------------------------
 plot(pp2D$GA)
+
+## ------------------------------------------------------------------------
 plot(pp2D)
+
+## ---- fig.width = 7, fig.height = 5--------------------------------------
 plot(pp2D, class = Class, drawAxis = FALSE)
 
 ## ------------------------------------------------------------------------
@@ -48,9 +58,25 @@ pp3D <- ppgmmga(data = X, d = 3,
                 options = ppgmmga.options(numIslands = 2),
                 seed = 1)
 summary(pp3D$GA)
+
+## ------------------------------------------------------------------------
 plot(pp3D$GA)
+
+## ---- fig.width = 6, fig.height = 6--------------------------------------
 plot(pp3D)
+
+## ---- fig.width = 6, fig.height = 6--------------------------------------
 plot(pp3D, class = Class)
+
+## ------------------------------------------------------------------------
 plot(pp3D, dim = c(1,2))
+
+## ---- fig.width = 7, fig.height = 5--------------------------------------
 plot(pp3D, dim = c(1,3), class = Class)
+
+## ---- echo=FALSE, results='asis'-----------------------------------------
+print(citation("ppgmmga"), style = "text")
+
+## ------------------------------------------------------------------------
+sessionInfo()
 
