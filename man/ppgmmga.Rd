@@ -65,32 +65,53 @@ Scrucca L. \email{luca.scrucca@unipg.it}
 }
 
 \references{
-Scrucca, L. and Serafini, A. (2018) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. \emph{Under review}.
+Scrucca, L. and Serafini, A. (2019) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. *Journal of Computational and Graphical Statistics*, DOI: 10.1080/10618600.2019.1598871 
 }
 
 \seealso{
 \code{\link{summary.ppgmmga}}, \code{\link{plot.ppgmmga}}, \code{\link{ppgmmga-class}}
 }
 \examples{
-
+\dontrun{
 data(iris)
 X <- iris[,-5]
 Class <- iris$Species
 
-# Unscented Transformation approximation (default)
-pp1 <- ppgmmga(data = X, d = 2, approx = "UT", seed = 123)
-summary(pp1, check = TRUE)
-plot(pp1, Class)
+# 1-dimensional PPGMMGA
 
-\dontrun{
-# VARiational approximation
-pp2 <- ppgmmga(data = X, d = 2, approx = "VAR")
-summary(pp2, check = TRUE)
-plot(pp2, Class)
+pp1D <- ppgmmga(data = X, d = 1)
+summary(pp1D, check = TRUE)
+plot(pp1D, Class)
 
-# Second Order Taylor Expansion approximation
-pp3 <- ppgmmga(data = X, d = 2, approx = "SOTE")
-summary(pp3, check = TRUE)
-plot(pp3, Class)
+# 2-dimensional PPGMMGA
+
+## Unscented Transformation approximation (default)
+
+pp2D_1 <- ppgmmga(data = X, d = 2, approx = "UT")
+summary(pp2D_1, check = TRUE)
+plot(pp2D_1, Class)
+
+## VARiational approximation
+
+pp2D_2 <- ppgmmga(data = X, d = 2, approx = "VAR")
+summary(pp2D_2, check = TRUE)
+plot(pp2D_2, Class)
+
+## Second Order Taylor Expansion approximation
+
+pp2D_3 <- ppgmmga(data = X, d = 2, approx = "SOTE")
+summary(pp2D_3, check = TRUE)
+plot(pp2D_3, Class)
+
+# 3-dimensional PPGMMGA
+
+pp3D <- ppgmmga(data = X, d = 3, approx = "UT")
+summary(pp3D, check = TRUE)
+plot(pp3D, Class)
+
+# A rotating 3D plot can be obtained using:
+# if(!require("msir")) install.packages("msir")
+# msir::spinplot(pp3D$Z, markby = Class,
+#                col.points = ggthemes::tableau_color_pal("Classic 10")(3))
 }
 }
