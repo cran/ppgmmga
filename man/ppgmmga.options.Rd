@@ -64,6 +64,11 @@ Available options are:
 \item{\code{optimMaxit}}{An integer value specifying the number of iterations for the local search algorithm. By default \code{optimMaxit = 100}.}
 
 \item{\code{orth}}{A string specifying the method employed to orthogonalise the matrix basis. Available methods are the QR decomposition \code{"QR"}, and the Singular Value Decomposition \code{"SVD"}. By default \code{orth = "QR"}.}
+
+ \item{\code{classPlotSymbols}}{A vector whose entries are either integers corresponding to graphics symbols or single characters for indicating classifications when plotting data. Classes are assigned symbols in the given order.}
+ 
+ \item{\code{classPlotColors}}{A vector whose entries correspond to colors for indicating classifications when plotting data. Classes are assigned colors in the given order.}
+
 }
 
 For more details about options related to Gaussian mixture modelling see \code{\link[mclust]{densityMclust}}, and for those related to genetic algorithms see \code{\link[GA]{ga}} and \code{\link[GA]{gaisl}}. 
@@ -81,7 +86,7 @@ Scrucca, L. (2013) GA: A Package for Genetic Algorithms in R. \emph{Journal of S
 
 Scrucca, L. (2017) On some extensions to GA package: hybrid optimisation, parallelisation and islands evolution. \emph{The R Journal}, 9/1, 187-206. https://journal.r-project.org/archive/2017/RJ-2017-008
 
-Scrucca, L. and Serafini, A. (2019) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. *Journal of Computational and Graphical Statistics*, DOI: 10.1080/10618600.2019.1598871 
+Scrucca, L. and Serafini, A. (2019) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. \emph{Journal of Computational and Graphical Statistics}, 28:4, 847–860. DOI: 10.1080/10618600.2019.1598871 
 }
 
 \seealso{\code{\link{ppgmmga}}}

@@ -11,7 +11,7 @@
      class = NULL, 
      dim = seq(x$d), 
      drawAxis = TRUE, 
-     bins = nclass.Sturges,
+     bins = nclass.numpy,
      \dots)
 }
 
@@ -23,7 +23,7 @@
   The resulting graph depends on the dimension: in the 1D case a histogram is provided, a scatterplot in the 2D case, a scatterplot matrix in higher dimensions.
   }
   \item{drawAxis}{A logical value specifying whether or not the axes should be included in the 2D scatterplot. By default is to \code{TRUE}.}
-  \item{bins}{An R function to be used for computing the number of classes for the histogram. By default \code{nclass.Sturges} is used; see \code{\link{nclass.Sturges}} for more details. Users may provide a different function. This argument only applies to 1D graphs.}
+  \item{bins}{An R function to be used for computing the number of classes for the histogram. By default \code{\link{nclass.Sturges}} is used. Users may provide a different function. This argument only applies to 1D graphs.}
   \item{\dots}{further arguments.}
 }
 
@@ -40,7 +40,7 @@ Scrucca L. \email{luca.scrucca@unipg.it}
 }
 
 \references{
-Scrucca, L. and Serafini, A. (2019) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. *Journal of Computational and Graphical Statistics*, DOI: 10.1080/10618600.2019.1598871 
+Scrucca, L. and Serafini, A. (2019) Projection pursuit based on Gaussian mixtures and evolutionary algorithms. \emph{Journal of Computational and Graphical Statistics}, 28:4, 847–860. DOI: 10.1080/10618600.2019.1598871 
 }
 
 \seealso{\code{\link{ppgmmga}}}
